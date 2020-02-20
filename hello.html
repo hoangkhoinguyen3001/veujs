@@ -5,18 +5,23 @@
 
 <div id="app">
   <h1>{{ message }}</h1>
+  <p><input v-model="message"></p>
 </div>
-<p>
+<!--<p>
   <button onclick="myFunction()">Click Me!</button>
-</p>
+</p>-->
 <script>
-var myObject = new Vue({
+/*var myObject = new Vue({
   el: '#app',
   data: {message: 'Hello Vue!'}
 })
 function myFunction() {
     myObject.message = "John Doe";
-}
+}*/
+myObject = new Vue({
+  el: '#app',
+  data: {message: 'Hello Vue.js!'}
+})
 </script>
 
 </body>
