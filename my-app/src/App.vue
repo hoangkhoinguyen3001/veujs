@@ -7,6 +7,8 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Vue from 'vue'
+
 
 export default {
   name: 'App',
@@ -15,7 +17,8 @@ export default {
   }
 }
 </script>
-
+<script src="/path/to/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
