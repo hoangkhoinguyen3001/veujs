@@ -1,0 +1,12 @@
+@import './variables/variables.scss';
+
+@import './base/reset.scss';
+@import './base/base.scss';
+
+@import './components/header.scss';
+@import './components/footer.scss';
+@import './components/counting-up.scss';
+@import './components/choose-products.scss';
+
+@import './src/home.scss';
+@import './src/result.scss';

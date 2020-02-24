@@ -1,0 +1,25 @@
+@import '../variables/variables.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+div {
+    margin: 0;
+}
+
+#app {
+  padding: 0;
+  margin: 0;
+  font-family: $font;
+  height: 100vh;
+  overflow: auto;
+}
+
+html {
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+}

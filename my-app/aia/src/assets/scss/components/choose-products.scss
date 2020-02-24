@@ -1,0 +1,209 @@
+.choose-products {
+    width: 100%;
+    text-align: center;
+    padding: 100px 30px;
+    background-color: white;
+    height: auto;
+    overflow: hidden;
+    .row {
+        margin: 0;
+    }
+    .btn-default {
+        margin: 40px auto;
+    }
+    h2 {
+        font-size: 50px;
+        color: $bg-color;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    h4 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .choose-container {
+        transition: all .6s;
+        display: none;
+    }
+    .products {
+        margin: 30px auto;
+        background-color: white;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        animation-name: animate;
+        animation-duration: 2s;
+        > h2 {
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+        .col-md-6 {
+            margin-bottom: 30px;
+        }
+        .product {
+            margin: 15px auto;
+            height: 450px;
+            width: 100%;
+            background-color: navy;
+            border-radius: 15px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            &-content {
+                text-align: left;
+                background-color: white;
+                padding: 10px 20px;
+                transition: all .3s;
+                overflow: hidden;
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12);
+                border-top: 4px solid rgba(166,232,222,1);
+                font-size: 15px;
+                &:hover .btn-no-border {
+                    background-color: $bg-color;
+                    color: white;
+                }
+                h4 {
+                    text-transform: uppercase;
+                    border-bottom: 1px solid $font-color;
+                    margin-bottom: 30px;
+                    letter-spacing: 1px;
+                }
+                 p {
+                    color: $font-color;
+                    letter-spacing: 1px;
+                 }
+                button {
+                    position: relative;
+                    float: right;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 15px;
+                        height: 15px;
+                        transform: translate(10px, -50%) rotate(45deg);
+                        border-right: 1px solid;
+                        border-top: 1px solid;
+                        top: 50%;
+                    }
+                }
+            }
+            &:hover {
+                .product-content {
+                    height: 300px;
+                    transition: all .3s;
+                }
+            }
+            
+        }
+        
+    }
+    .investment {
+        display: none;
+    }
+
+    .form-container {
+        position: absolute;
+        top: 200%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px;
+        background-color: white;
+        border-radius: 8px;
+        transition: 0.5s;
+        max-width: 740px;
+        width: 100%;
+        z-index: 1000;
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        h4 {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0;
+            color: $bg-color;
+            letter-spacing: 3px;
+        }
+        > p {
+            margin-bottom: 30px;
+            letter-spacing: 0.3px;
+        }
+        input,
+        label {
+            width: 100%;
+        }
+        label {
+            text-align: left;
+            color: $bg-color;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        input {
+            padding: 5px 10px;
+            border: none;
+            border-bottom: 1px solid $font-color;
+            outline: none;
+            transition: 0.5s;
+            &:focus {
+                border-bottom: 1px solid #22a8da;
+            }
+        }
+        &.active {
+            top: 50%;
+        }
+        @media screen and (max-width: 768px) {
+            max-width: 400px;
+        }
+    }
+
+    .form-content {
+        padding-top: 10px;
+        p {
+            text-align: left;
+            color: red;
+        }
+    }
+
+    .dark-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        transition: 0.5s;
+        background-color: black;
+        opacity: 0;
+        z-index: 999;
+        &.active {
+            opacity: 0.4;
+            pointer-events: visible;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .products {
+            padding: 0;
+        }
+    }
+    .submit {
+        cursor: pointer;
+        display: inline-block;
+        padding: 5px 30px;
+        margin-top: 20px;
+        border-radius: 8px;
+        background-color: $bg-color;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: none;
+        outline: none;
+        border: 1px solid $bg-color;
+        transition: 0.3s ease-out;
+        &:hover {
+            background-color: white;
+            color: $bg-color;
+            border: 1px solid $bg-color;
+        }
+    }
+}
